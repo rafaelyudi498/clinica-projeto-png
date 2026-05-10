@@ -1,0 +1,37 @@
+[
+  {
+    "nome": "Psicologia Clínica",
+    "descricao": "Avaliação e tratamento de transtornos psicológicos",
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.450478",
+    "id": 1
+  },
+  {
+    "nome": "Psicologia Cognitivo-Comportamental",
+    "descricao": "Tratamento baseado em TCC",
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.450495",
+    "id": 2
+  },
+  {
+    "nome": "Psicologia do Desenvolvimento",
+    "descricao": "Avaliação e acompanhamento do desenvolvimento infantil",
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.450496",
+    "id": 3
+  },
+  {
+    "nome": "Terapia Familiar",
+    "descricao": "Terapia focada em dinâmica familiar",
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.450498",
+    "id": 4
+  },
+  {
+    "nome": "Psicologia Organizacional",
+    "descricao": "Consultoria em recursos humanos e desenvolvimento organizacional",
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.450499",
+    "id": 5
+  }
+]

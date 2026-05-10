@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "pedro rei delas",
+    "crp": "psicologo",
+    "especialidades": [
+      1
+    ],
+    "horario_inicio": "08:00",
+    "horario_fim": "18:00",
+    "dias_trabalho": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ativo": true,
+    "data_criacao": "2026-05-05T21:41:42.880188",
+    "observacoes": null,
+    "id": 1
+  }
+]

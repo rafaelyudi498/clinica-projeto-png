@@ -1,0 +1,27 @@
+[
+  {
+    "data": "2026-05-07",
+    "hora": "12:00",
+    "horario_fim": "13:00",
+    "paciente": {
+      "id": 1,
+      "nome": "moises"
+    },
+    "profissional": {
+      "id": 1,
+      "nome": "pedro rei delas"
+    },
+    "especialidade": {
+      "id": 1,
+      "nome": "Psicologo"
+    },
+    "status": "confirmado",
+    "notas": "",
+    "notas_atendimento": null,
+    "data_criacao": "2026-05-05T21:43:49.441904",
+    "data_atualizacao": "2026-05-05T21:43:49.441904",
+    "cancelado_em": null,
+    "motivo_cancelamento": null,
+    "id": "AGD-2026-0001"
+  }
+]

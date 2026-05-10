@@ -1,0 +1,27 @@
+[
+  {
+    "data": "2026-05-15",
+    "hora": "08:00",
+    "horario_fim": "09:00",
+    "paciente": {
+      "id": 1,
+      "nome": "Rafael Yudi Tokunaga"
+    },
+    "profissional": {
+      "id": 1,
+      "nome": "Dra. Maria Silva"
+    },
+    "especialidade": {
+      "id": 2,
+      "nome": "Psicologia Cognitivo-Comportamental"
+    },
+    "status": "confirmado",
+    "notas": "",
+    "notas_atendimento": null,
+    "data_criacao": "2026-05-08T19:04:50.199538",
+    "data_atualizacao": "2026-05-08T19:04:50.199542",
+    "cancelado_em": null,
+    "motivo_cancelamento": null,
+    "id": "AGD-2026-0001"
+  }
+]

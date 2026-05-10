@@ -1,0 +1,103 @@
+[
+  {
+    "data": "2026-05-15",
+    "hora": "08:00",
+    "horario_fim": "09:00",
+    "paciente": {
+      "id": 1,
+      "nome": "Rafael Yudi Tokunaga"
+    },
+    "profissional": {
+      "id": 1,
+      "nome": "Dra. Maria Silva"
+    },
+    "especialidade": {
+      "id": 2,
+      "nome": "Psicologia Cognitivo-Comportamental"
+    },
+    "status": "cancelado",
+    "notas": "",
+    "notas_atendimento": null,
+    "data_criacao": "2026-05-08T19:04:50.199538",
+    "data_atualizacao": "2026-05-08T19:05:19.698893",
+    "cancelado_em": "2026-05-08T19:05:19.698887",
+    "motivo_cancelamento": "nao da pra ir",
+    "id": "AGD-2026-0001"
+  },
+  {
+    "data": "2026-05-11",
+    "hora": "12:00",
+    "horario_fim": "13:00",
+    "paciente": {
+      "id": 2,
+      "nome": "Rafael Y"
+    },
+    "profissional": {
+      "id": 2,
+      "nome": "Dr. João Santos"
+    },
+    "especialidade": {
+      "id": 5,
+      "nome": "Psicologia Organizacional"
+    },
+    "status": "cancelado",
+    "notas": "quero um cancer",
+    "notas_atendimento": null,
+    "data_criacao": "2026-05-08T19:17:22.696248",
+    "data_atualizacao": "2026-05-08T19:18:05.318049",
+    "cancelado_em": "2026-05-08T19:18:05.318043",
+    "motivo_cancelamento": "ele é cabaço",
+    "id": "AGD-2026-0002"
+  },
+  {
+    "data": "2026-05-11",
+    "hora": "08:00",
+    "horario_fim": "09:00",
+    "paciente": {
+      "id": 3,
+      "nome": "Cristina"
+    },
+    "profissional": {
+      "id": 1,
+      "nome": "Dra. Maria Silva"
+    },
+    "especialidade": {
+      "id": 1,
+      "nome": "Psicologia Clínica"
+    },
+    "status": "confirmado",
+    "notas": "eu quero atestado",
+    "notas_atendimento": null,
+    "data_criacao": "2026-05-08T19:56:23.246953",
+    "data_atualizacao": "2026-05-08T19:56:23.246959",
+    "cancelado_em": null,
+    "motivo_cancelamento": null,
+    "id": "AGD-2026-0003"
+  },
+  {
+    "data": "2026-12-10",
+    "hora": "12:00",
+    "horario_fim": "13:00",
+    "paciente": {
+      "id": 4,
+      "nome": "rafael"
+    },
+    "profissional": {
+      "id": 3,
+      "nome": "Psicóloga Ana Costa"
+    },
+    "especialidade": {
+      "id": 1,
+      "nome": "Psicologia Clínica"
+    },
+    "status": "confirmado",
+    "notas": "",
+    "notas_atendimento": null,
+    "data_criacao": "2026-05-10T11:25:25.269396",
+    "data_atualizacao": "2026-05-10T11:26:38.654569",
+    "cancelado_em": null,
+    "motivo_cancelamento": null,
+    "id": "AGD-2026-0004",
+    "motivo_reagendamento": "sla"
+  }
+]

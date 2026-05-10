@@ -1,0 +1,17 @@
+[
+  {
+    "data": "05/05/2026 20:20:31",
+    "itens": [
+      {
+        "codigo": 1,
+        "nome": "moises",
+        "preco": 1.0,
+        "qtd": 1,
+        "subtotal": 1.0
+      }
+    ],
+    "total": 1.0,
+    "recebido": 100.0,
+    "troco": 99.0
+  }
+]
