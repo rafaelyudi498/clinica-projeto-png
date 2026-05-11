@@ -84,9 +84,6 @@ class Database:
         
         # Calcular próximos IDs
         self._atualizar_contadores()
-        
-        # Pré-popular com dados iniciais se vazio
-        self._pré_popular_dados_iniciais()
     
     def _atualizar_contadores(self):
         """Calcula os próximos IDs disponíveis."""
@@ -121,120 +118,6 @@ class Database:
         else:
             self._proximo_id_especialidade = 1
     
-    def _pré_popular_dados_iniciais(self):
-        """Pré-popula o banco com especialidades e profissionais iniciais."""
-        # Só popular se vazio
-        if self._especialidades or self._profissionais:
-            return
-        
-        # Criar especialidades padrão
-        especialidades_padrao = [
-            {
-                "nome": "Psicologia Clínica",
-                "descricao": "Avaliação e tratamento de transtornos psicológicos",
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat()
-            },
-            {
-                "nome": "Psicologia Cognitivo-Comportamental",
-                "descricao": "Tratamento baseado em TCC",
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat()
-            },
-            {
-                "nome": "Psicologia do Desenvolvimento",
-                "descricao": "Avaliação e acompanhamento do desenvolvimento infantil",
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat()
-            },
-            {
-                "nome": "Terapia Familiar",
-                "descricao": "Terapia focada em dinâmica familiar",
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat()
-            },
-            {
-                "nome": "Psicologia Organizacional",
-                "descricao": "Consultoria em recursos humanos e desenvolvimento organizacional",
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat()
-            }
-        ]
-        
-        # Salvar especialidades
-        for esp in especialidades_padrao:
-            esp["id"] = self._proximo_id_especialidade
-            self._proximo_id_especialidade += 1
-            self._especialidades.append(esp)
-        
-        self._escrever_json(self.arquivo_especialidades, self._especialidades)
-        
-        # Criar profissionais padrão (com referências às especialidades)
-        profissionais_padrao = [
-            {
-                "nome": "Dra. Maria Silva",
-                "crp": "CRP 06/123456",
-                "especialidades": [1, 2],  # Clínica e TCC
-                "horario_inicio": "08:00",
-                "horario_fim": "17:00",
-                "dias_trabalho": [1, 2, 3, 4, 5],  # Seg-sex
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat(),
-                "observacoes": "Especialista em ansiedade e depressão"
-            },
-            {
-                "nome": "Dr. João Santos",
-                "crp": "CRP 06/234567",
-                "especialidades": [2, 5],  # TCC e Organizacional
-                "horario_inicio": "09:00",
-                "horario_fim": "18:00",
-                "dias_trabalho": [1, 2, 4, 5],  # Seg, ter, qui, sex
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat(),
-                "observacoes": "Consultoria empresarial"
-            },
-            {
-                "nome": "Psicóloga Ana Costa",
-                "crp": "CRP 06/345678",
-                "especialidades": [1, 3, 4],  # Clínica, desenvolvimento e familiar
-                "horario_inicio": "08:30",
-                "horario_fim": "16:30",
-                "dias_trabalho": [2, 3, 4, 5],  # Ter-sex
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat(),
-                "observacoes": "Trabalha com crianças e famílias"
-            },
-            {
-                "nome": "Dr. Carlos Mendes",
-                "crp": "CRP 06/456789",
-                "especialidades": [1, 2],  # Clínica e TCC
-                "horario_inicio": "10:00",
-                "horario_fim": "18:00",
-                "dias_trabalho": [1, 3, 4, 5],  # Seg, qua, qui, sex
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat(),
-                "observacoes": "Especialista em trauma e PTSD"
-            },
-            {
-                "nome": "Psicóloga Fernanda Oliveira",
-                "crp": "CRP 06/567890",
-                "especialidades": [3, 4, 5],  # Desenvolvimento, familiar e organizacional
-                "horario_inicio": "08:00",
-                "horario_fim": "17:00",
-                "dias_trabalho": [1, 2, 3, 4, 5],  # Seg-sex
-                "ativo": True,
-                "data_criacao": datetime.now().isoformat(),
-                "observacoes": "Trabalha com recursos humanos"
-            }
-        ]
-        
-        # Salvar profissionais
-        for prof in profissionais_padrao:
-            prof["id"] = self._proximo_id_profissional
-            self._proximo_id_profissional += 1
-            self._profissionais.append(prof)
-        
-        self._escrever_json(self.arquivo_profissionais, self._profissionais)
     
     # =========================================================================
     # OPERAÇÕES ARQUIVO (I/O)

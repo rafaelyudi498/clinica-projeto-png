@@ -1,12 +1,13 @@
 [
   {
-    "nome": "pedro rei delas",
-    "crp": "psicologo",
+    "nome": "Dra. Maria Silva",
+    "crp": "CRP 06/123456",
     "especialidades": [
-      1
+      1,
+      2
     ],
     "horario_inicio": "08:00",
-    "horario_fim": "18:00",
+    "horario_fim": "17:00",
     "dias_trabalho": [
       1,
       2,
@@ -15,8 +16,91 @@
       5
     ],
     "ativo": true,
-    "data_criacao": "2026-05-05T21:41:42.880188",
-    "observacoes": null,
+    "data_criacao": "2026-05-08T18:54:49.451092",
+    "observacoes": "Especialista em ansiedade e depressão",
     "id": 1
+  },
+  {
+    "nome": "Dr. João Santos",
+    "crp": "CRP 06/234567",
+    "especialidades": [
+      2,
+      5
+    ],
+    "horario_inicio": "09:00",
+    "horario_fim": "18:00",
+    "dias_trabalho": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.451098",
+    "observacoes": "Consultoria empresarial",
+    "id": 2
+  },
+  {
+    "nome": "Psicóloga Ana Costa",
+    "crp": "CRP 06/345678",
+    "especialidades": [
+      1,
+      3,
+      4
+    ],
+    "horario_inicio": "08:30",
+    "horario_fim": "16:30",
+    "dias_trabalho": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.451101",
+    "observacoes": "Trabalha com crianças e famílias",
+    "id": 3
+  },
+  {
+    "nome": "Dr. Carlos Mendes",
+    "crp": "CRP 06/456789",
+    "especialidades": [
+      1,
+      2
+    ],
+    "horario_inicio": "10:00",
+    "horario_fim": "18:00",
+    "dias_trabalho": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.451103",
+    "observacoes": "Especialista em trauma e PTSD",
+    "id": 4
+  },
+  {
+    "nome": "Psicóloga Fernanda Oliveira",
+    "crp": "CRP 06/567890",
+    "especialidades": [
+      3,
+      4,
+      5
+    ],
+    "horario_inicio": "08:00",
+    "horario_fim": "17:00",
+    "dias_trabalho": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ativo": true,
+    "data_criacao": "2026-05-08T18:54:49.451104",
+    "observacoes": "Trabalha com recursos humanos",
+    "id": 5
   }
 ]

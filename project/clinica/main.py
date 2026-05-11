@@ -6,13 +6,6 @@ Utiliza padrão de container de dependências para injeção de services.
 """
 
 from typing import Optional
-from datetime import date
-
-# Imports - Stdlib
-# (nenhum adicional necessário)
-
-# Imports - Third-party
-# (nenhum adicional necessário)
 
 # Imports - Local
 from modules.database import Database

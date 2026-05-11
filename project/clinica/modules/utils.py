@@ -143,58 +143,63 @@ def horarios_disponiveis(
 
 
 # ============================================================================
-# BUSCA FUZZY
+# BUSCA FUZZY (Otimizada)
 # ============================================================================
 
 def busca_fuzzy(
     termo: str,
-    lista: List[str],
-    limiar: float = 0.6
-) -> List[Tuple[float, str]]:
+    lista: List,
+    campo: Optional[str] = None,
+    limiar: float = 0.5
+) -> List[Tuple[float, any]]:
     """
-    Busca fuzzy em lista de strings.
-    Retorna lista de tuples (score, valor) ordenada por score DESC.
+    Busca fuzzy genérica para strings ou dicionários.
+    
+    Args:
+        termo: Termo a buscar
+        lista: Lista de strings ou dicts
+        campo: Se lista contém dicts, qual campo buscar (opcional)
+        limiar: Score mínimo (0-1)
+    
+    Retorna:
+        Lista de (score, valor) ordenada por score DESC
     
     Exemplo:
-        busca_fuzzy("joao", ["João Silva", "Pedro Costa"], 0.5)
-        → [(0.85, "João Silva")]
+        busca_fuzzy("joao", ["João Silva"], 0.5)
+        busca_fuzzy("joao", [{"nome": "João"}], "nome", 0.6)
     """
+    if not lista or not termo:
+        return []
+    
     termo_lower = termo.lower()
     resultados = []
     
     for item in lista:
-        item_lower = item.lower()
-        score = SequenceMatcher(None, termo_lower, item_lower).ratio()
+        # Extrair valor a buscar
+        if isinstance(item, dict) and campo:
+            valor = str(item.get(campo, "")).lower()
+        elif isinstance(item, str):
+            valor = item.lower()
+        else:
+            continue
+        
+        # Calcular score de similaridade
+        score = SequenceMatcher(None, termo_lower, valor).ratio()
         if score >= limiar:
             resultados.append((score, item))
     
     return sorted(resultados, key=lambda x: x[0], reverse=True)
 
 
+# Mantém busca_fuzzy_dict para compatibilidade
 def busca_fuzzy_dict(
     termo: str,
     lista: List[dict],
     campo: str,
-    limiar: float = 0.6
+    limiar: float = 0.5
 ) -> List[Tuple[float, dict]]:
-    """
-    Busca fuzzy em lista de dicionários.
-    
-    Exemplo:
-        busca_fuzzy_dict("joao", pacientes, "nome", 0.6)
-        → [(0.85, {id: 1, nome: "João Silva"})]
-    """
-    termo_lower = termo.lower()
-    resultados = []
-    
-    for item in lista:
-        valor = item.get(campo, "")
-        valor_lower = str(valor).lower()
-        score = SequenceMatcher(None, termo_lower, valor_lower).ratio()
-        if score >= limiar:
-            resultados.append((score, item))
-    
-    return sorted(resultados, key=lambda x: x[0], reverse=True)
+    """Alias para busca_fuzzy com dicionários."""
+    return busca_fuzzy(termo, lista, campo, limiar)
 
 
 # ============================================================================
